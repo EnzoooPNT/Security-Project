@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+    <title>Index</title>
+</head>
+
+<body>
+
+    {% for message in messages  %}
+
+    <strong>{{ message }}<strong>
+
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+
+    <div class="bienvenu">
+        <h1>Bienvenu {{ request.user }}</h1>
+        <button type="submit"><a href="/logout" style="text-decoration:none">Se deconnecter</a></button>
+    </div>
+
+    {% else %}
+
+        <header class="text">
+            <h4>Eh salut ! Si tu veux voir notre travail, inscris ou connecte toi ;)</h4>
+        </header>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="container">
+                    <h4>Créer ton compte</h4>
+                    <button type="submit"><a href="/register" style="text-decoration:none">S'inscrire</a></button>
+                </div>
+            </div>
+        
+            <div class="card2">
+                <div class="container">
+                    <h4>Connecte toi</h4>
+                    <button type="submit"><a href="/login" style="text-decoration:none">Se connecter</a></button>
+                </div>
+            </div>
+
+        </div>
+
+    {% endif %}
+    
+</body>
+</html>

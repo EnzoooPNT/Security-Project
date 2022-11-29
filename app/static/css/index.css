@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+*{
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Header text*/
+
+.text {
+  margin-top: 50px;
+  z-index: 1999;
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+}
+
+/* Text*/
+
+.text h1{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.text h4{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-top: 75px;
+  padding: 100px;
+}
+
+.card2 {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-top: 75px;
+  padding: 102px;
+}
+
+.card3 {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-top: 75px;
+  padding: 100px;
+  display: flex;
+}
+
+/* Container de card */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+/* Animation cards */
+
+.card {
+  /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+.card:hover {
+  /* L'image est grossie de 10% */
+  -webkit-transform:scale(1.10); /* Safari et Chrome */
+  -moz-transform:scale(1.10); /* Firefox */
+  -ms-transform:scale(1.10); /* Internet Explorer 9 */
+  -o-transform:scale(1.10); /* Opera */
+  transform:scale(1.10);
+}
+
+.card2 {
+  /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+  
+.card2:hover {
+  /* L'image est grossie de 10% */
+  -webkit-transform:scale(1.10); /* Safari et Chrome */
+  -moz-transform:scale(1.10); /* Firefox */
+  -ms-transform:scale(1.10); /* Internet Explorer 9 */
+  -o-transform:scale(1.10); /* Opera */
+  transform:scale(1.10);
+}
+
+/* Button */
+
+button {
+  display: inline-block;
+  background-color: #454545;
+  border-radius: 10px;
+  border: 4px #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 15px;
+  padding: 17px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: 'Rubik', sans-serif;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  opacity: 1;
+  right: 0;
+}
+
+button:hover {
+  background-color: rgb(130, 130, 130);
+}
+
+button:hover span {
+  padding-right: 20px;
+}
